@@ -47,9 +47,8 @@ curl --data-binary @input.csv http://127.0.0.1:1323/sim
 { ... sim results ...}
 ```
 
-In a browser the web app should be running in development mode:
-
-http://127.0.0.1:3000/
+**The dev webserver available from create react app should be
+usable once you finish the task.**
 
 ### Run Go tests
 
