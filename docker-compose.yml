@@ -1,19 +1,29 @@
 version: "3"
-
 services:
   backend:
     build:
       context: .
       dockerfile: Dockerfile.api
-    
+
     ports:
       - 1323:1323
-    
-    networks: 
+
+    networks:
       - simplesim
 
   # frontend:
   # TODO: Add container to run front end code in developer mode
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "3000:3000"
+    volumes:
+      - "/app/node_modules"
+      - "./:/app"
 
 networks:
-  simplesim: {}
+  simplesim:
+    external: true
+    name: simplesim
