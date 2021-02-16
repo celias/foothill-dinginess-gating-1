@@ -1,6 +1,8 @@
 package web
 
 import (
+	"simplesim/api/pkg/sim"
+
 	"github.com/labstack/echo/v4"
 )
 
@@ -10,10 +12,7 @@ func handlePing(c echo.Context) error {
 
 func handleSim(c echo.Context) error {
 	// FIXME: Call sim.Sim() with the POST'd input
-	return c.JSON(
-		501,
-		map[string]string{
-			"msg": "not implemented",
-		},
-	)
+	resp := sim.Result{}
+
+	return c.JSON(200, resp)
 }
