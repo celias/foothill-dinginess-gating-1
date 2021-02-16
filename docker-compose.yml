@@ -15,14 +15,13 @@ services:
   # TODO: Add container to run front end code in developer mode
   frontend:
     build:
-      context: .
+      context: ./web
       dockerfile: Dockerfile.web
     ports:
       - 3000:3000
     volumes:
-      - /app/node_modules
-      - ./:/app
-      - /app
+      - ./web:/usr/src/app/web
+      - /usr/src/app/node_modules
 
 networks:
   simplesim:
