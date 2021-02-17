@@ -12,7 +12,6 @@ func handlePing(c echo.Context) error {
 
 func handleSim(c echo.Context) error {
 	// FIXME: Call sim.Sim() with the POST'd input
-	resp := sim.Result{}
-
+	resp := sim.Results{}
 	return c.JSON(200, resp)
 }

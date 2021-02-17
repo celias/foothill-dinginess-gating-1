@@ -1,0 +1,9 @@
+.HorizontalDivider {
+  display: flex;
+  justify-content: center;
+  background: gray;
+  border: 0;
+  height: 1px;
+  width: 85%;
+  justify-content: center;
+}
